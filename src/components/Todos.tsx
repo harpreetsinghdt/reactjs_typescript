@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
 import TodoItem from "./TodoItem";
-import cls from "./Todos.module.css";
-
 import { TodosContext } from "../store/Context";
+import classes from "./Todos.module.css";
 
-const Todos: React.FC = (props) => {
+const Todos: React.FC = () => {
   const todosCtx = useContext(TodosContext);
+
   return (
-    <ul className={cls.todos}>
+    <ul className={classes.todos}>
       {todosCtx.items.map((item) => (
         <TodoItem
           key={item.id}
