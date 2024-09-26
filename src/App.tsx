@@ -1,6 +1,7 @@
 import "./App.css";
 import NewTodo from "./components/NewTodo";
 import Todos from "./components/Todos";
+import TodosContextProvider from "./store/Context";
 
 function App() {
   // const todos = [new Todo("Learn React"), new Todo("Learn TypeScript")];
@@ -18,10 +19,10 @@ function App() {
   // };
 
   return (
-    <div>
+    <TodosContextProvider>
       <NewTodo />
       <Todos />
-    </div>
+    </TodosContextProvider>
   );
 }
 
